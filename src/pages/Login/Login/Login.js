@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { useForm } from "react-hook-form";
 import './Login.css'
 import login_img from '../../../Images/login_img.jpg'
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import useAuth from '../../../hooks/useAuth';
 
 
 const Login = () => {
@@ -12,7 +12,19 @@ const Login = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = data => console.log(data);
 
+    const { signInWithGoogle, setUser, setIsLoading } = useAuth();
 
+    // firebase auth method 
+    const googleSignIn = () => {
+        signInWithGoogle()
+            .then(res => {
+                setUser(res.user)
+                // history.push(redirect);
+            })
+            .finally(() => {
+                setIsLoading(false)
+            })
+    }
 
     return (
         <div className='login py-5 bg-light'>
@@ -44,7 +56,7 @@ const Login = () => {
                         </form>
                         <div>
                             <h6>or Login With</h6>
-                            <span style={{ color: "Tomato" }}><i className="fab fa-google fa-2x"></i></span>
+                            <span style={{ color: "Tomato" }} onClick={googleSignIn}><i className="fab fa-google fa-2x"></i></span>
                         </div>
                         <div className="py-4">
                             <span className="pe-2"> Don't Have an Account?</span><Link to="/register">Create Account</Link>
