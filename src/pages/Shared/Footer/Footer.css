@@ -1,0 +1,6 @@
+.footer-link li{
+    list-style: none;
+}
+.footer-link li a:hover{
+    border-bottom: 2px solid blue;
+}
