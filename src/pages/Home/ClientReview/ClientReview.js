@@ -17,7 +17,7 @@ const ClientReview = () => {
                                 <Card.Text>
                                     The trip was completely seamless. We were met as scheduled at every meeting point throughout the trip. The car types were as promised and the drivers professional at all times.All the guides that we toured with were the best I have been associated with and are highly recommended.
                                 </Card.Text>
-                                <p className='text-warning'><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></p>
+                                <p className='text-warning'><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star-half-alt"></i></p>
                             </Card.Body>
                         </Card>
                     </Col>
@@ -30,7 +30,7 @@ const ClientReview = () => {
                                     My husband and I got very lucky and were married right before COVID hit. However, we weren't able to go on our honeymoon. We waited almost two years before we could enjoy some newlyweds time and since we couldn't go anywhere, we decided to splurge and use our savings for bdTravle.
 
                                 </Card.Text>
-                                <p className='text-warning'><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></p>
+                                <p className='text-warning'><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="far fa-star"></i></p>
                             </Card.Body>
                         </Card>
                     </Col>
@@ -42,7 +42,7 @@ const ClientReview = () => {
                                 <Card.Text>
                                     This  <strong>bdTravel</strong> company provided excellent communication, recommendations, and service from our initial contact through a follow-up post-trip. We originally booked this trip in 2019 for 2020 prior to the onset of Covid, which led to many uncertainties and changes until it was finally executed in 2021.
                                 </Card.Text>
-                                <p className='text-warning'><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></p>
+                                <p className='text-warning'><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star-half-alt"></i></p>
                             </Card.Body>
                         </Card>
                     </Col>
