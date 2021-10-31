@@ -38,7 +38,7 @@ const ManageBooking = () => {
 
     //handle update Status
     const handelUpdate = (id) => {
-        fetch(`https://dark-mansion-51838.herokuapp.com/${id}`, {
+        fetch(`https://dark-mansion-51838.herokuapp.com/booking/${id}`, {
             method: "PUT",
             headers: {
                 'Content-Type': "application/json"
