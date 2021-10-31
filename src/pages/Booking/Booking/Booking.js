@@ -7,7 +7,7 @@ import Place from '../../Home/Place/Place';
 const Booking = () => {
     const [place, setPlace] = useState({})
     const history = useHistory();
-    const [booking, setBooking] = useState({ name: '', email: '', phone: '' });
+    const [booking, setBooking] = useState({ name: '', email: '', phone: '', address: '', date: '' });
     const { id } = useParams();
 
     const { user } = useAuth();
@@ -33,10 +33,12 @@ const Booking = () => {
     }
 
     const registerBooking = (e) => {
-        console.log(booking);
-        console.log(place)
-        setBooking({ ...booking, ...place })
+        // console.log(booking);
+        // console.log(place)
+        // setBooking({ ...booking, ...place })
         console.log({ ...booking, ...place }, 'com');
+        const { _id, ...exceptId } = place;
+        console.log(exceptId, 'with');
         if (booking.phone) {
             const url = 'http://localhost:7000/booking'
             fetch(url, {
@@ -45,7 +47,7 @@ const Booking = () => {
                     'Content-Type': 'application/json'
                     // 'Content-Type': 'application/x-www-form-urlencoded',
                 },
-                body: JSON.stringify({ ...booking, ...place })
+                body: JSON.stringify({ ...booking, ...exceptId, status: 'pending' })
             })
                 .then(res => res.json())
                 .then(data => {
@@ -84,7 +86,17 @@ const Booking = () => {
                             </Row>
                             <Row className="justify-content-center mb-3">
                                 <Col lg="6">
+                                    <Form.Control size="lg" type="text" placeholder="address" name='address' value={booking.address} onChange={getValue} required />
+                                </Col>
+                            </Row>
+                            <Row className="justify-content-center mb-3">
+                                <Col lg="6">
                                     <Form.Control size="lg" type="number" placeholder="phone" name='phone' value={booking.phone} onChange={getValue} required />
+                                </Col>
+                            </Row>
+                            <Row className="justify-content-center mb-3">
+                                <Col lg="6">
+                                    <Form.Control size="lg" type="date" placeholder="date" name='date' value={booking.date} onChange={getValue} required />
                                 </Col>
                             </Row>
                             <Row className="justify-content-center mb-3">

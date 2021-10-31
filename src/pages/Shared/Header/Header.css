@@ -1,0 +1,9 @@
+.header_link{
+    display: flex;
+}
+
+@media only screen and (max-width: 668px) {
+    .header_link {
+      flex-direction: column;
+    }
+  }
