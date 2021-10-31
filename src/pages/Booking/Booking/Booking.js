@@ -14,7 +14,7 @@ const Booking = () => {
     booking.email = user.email
     booking.name = user?.displayName
     useEffect(() => {
-        const url = `https://dark-mansion-51838.herokuapp.com/${id}`
+        const url = `https://dark-mansion-51838.herokuapp.com/places/${id}`
         fetch(url)
             .then(res => res.json())
             .then(data => {
