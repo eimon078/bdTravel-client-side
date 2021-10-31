@@ -11,23 +11,20 @@ const MyBooking = () => {
 
     //load all mybooking
     useEffect(() => {
-        const url = `http://localhost:7000/booking/${user.email}`
+        const url = `https://dark-mansion-51838.herokuapp.com/booking/${user.email}`
         fetch(url)
             .then(res => res.json())
             .then(data => {
-                console.log(data);
                 setMyBooking(data);
-                console.log(myBooking);
             })
     }, [user.email])
 
 
     //handle delete booking
     const handelDelete = (id) => {
-        console.log(id);
         const procced = window.confirm("Are You sure to Delete?");
         if (procced) {
-            const url = `http://localhost:7000/booking/${id}`
+            const url = `https://dark-mansion-51838.herokuapp.com/booking/${id}`
             fetch(url, {
                 method: 'DELETE'
             })

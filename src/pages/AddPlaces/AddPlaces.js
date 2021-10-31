@@ -5,9 +5,8 @@ import { useForm } from "react-hook-form";
 const AddPlaces = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
-        console.log(data)
         if (data.placeName) {
-            const url = 'http://localhost:7000/places'
+            const url = 'https://dark-mansion-51838.herokuapp.com/places'
             fetch(url, {
                 method: 'POST',
                 headers: {
@@ -20,7 +19,6 @@ const AddPlaces = () => {
                 .then(pdata => {
                     if (pdata.insertedId) {
                         alert("successfully added")
-                        console.log(pdata)
                         reset();
                     }
                 })

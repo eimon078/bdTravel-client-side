@@ -9,10 +9,9 @@ const ManageBooking = () => {
 
     //load All booking data
     useEffect(() => {
-        fetch('http://localhost:7000/booking')
+        fetch('https://dark-mansion-51838.herokuapp.com/booking')
             .then(res => res.json())
             .then(data => {
-                console.log(data);
                 setAllBooking(data);
             })
     }, [update])
@@ -20,10 +19,9 @@ const ManageBooking = () => {
 
     //handle delete
     const handelDelete = (id) => {
-        console.log(id);
         const procced = window.confirm("Are You sure to Delete?");
         if (procced) {
-            const url = `http://localhost:7000/booking/${id}`
+            const url = `https://dark-mansion-51838.herokuapp.com/booking/${id}`
             fetch(url, {
                 method: 'DELETE'
             })
@@ -40,8 +38,7 @@ const ManageBooking = () => {
 
     //handle update Status
     const handelUpdate = (id) => {
-        console.log(id);
-        fetch(`http://localhost:7000/booking/${id}`, {
+        fetch(`https://dark-mansion-51838.herokuapp.com/${id}`, {
             method: "PUT",
             headers: {
                 'Content-Type': "application/json"
@@ -53,7 +50,6 @@ const ManageBooking = () => {
                 if (data.modifiedCount > 0) {
                     alert("Update SuccessFully");
                     setUpdate(!update)
-                    console.log(update)
                 }
             })
 

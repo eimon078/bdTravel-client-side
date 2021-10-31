@@ -8,11 +8,10 @@ const Places = () => {
 
     useEffect(() => {
         setLoading(true);
-        fetch('http://localhost:7000/places')
+        fetch('https://dark-mansion-51838.herokuapp.com/places')
             .then(res => res.json())
             .then(data => {
                 setPlaces(data);
-                console.log(data)
                 setLoading(false);
             })
     }, [])

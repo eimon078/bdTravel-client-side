@@ -11,17 +11,14 @@ const Booking = () => {
     const { id } = useParams();
 
     const { user } = useAuth();
-    console.log(user);
     booking.email = user.email
     booking.name = user?.displayName
-    console.log(booking.name);
     useEffect(() => {
-        const url = `http://localhost:7000/places/${id}`
+        const url = `https://dark-mansion-51838.herokuapp.com/${id}`
         fetch(url)
             .then(res => res.json())
             .then(data => {
                 setPlace(data)
-                console.log(place);
             })
 
     }, [])
@@ -33,14 +30,10 @@ const Booking = () => {
     }
 
     const registerBooking = (e) => {
-        // console.log(booking);
-        // console.log(place)
-        // setBooking({ ...booking, ...place })
-        console.log({ ...booking, ...place }, 'com');
         const { _id, ...exceptId } = place;
-        console.log(exceptId, 'with');
+        // console.log(exceptId);
         if (booking.phone) {
-            const url = 'http://localhost:7000/booking'
+            const url = 'https://dark-mansion-51838.herokuapp.com/booking'
             fetch(url, {
                 method: 'POST',
                 headers: {
@@ -52,7 +45,6 @@ const Booking = () => {
                 .then(res => res.json())
                 .then(data => {
                     if (data.insertedId) {
-                        console.log(data);
                         alert('Booking Successfully');
                         history.push('/');
 
