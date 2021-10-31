@@ -19,3 +19,7 @@ To develop this site here I uses `react`,`firebase`,`react router`,`node`,`expre
 **How Create Account?**
 
 Right now to create account You Just only uses `google` account.In near future I will implement `email`,`password` login system.
+
+**Our policy**
+
+If you want to get our services you must have an annount.Which is verified by Google Firebase.
