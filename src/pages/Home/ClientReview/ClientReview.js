@@ -5,9 +5,9 @@ import './ClientReview.css'
 const ClientReview = () => {
 
     return (
-        <div>
-            <h1>This is review</h1>
-            <Container>
+        <div className='my-5'>
+            <h1>REVIEWS</h1>
+            <Container className='mt-5'>
                 <Row className="g-4">
                     <Col lg="4">
                         <Card className='justify-content-center align-items-center'>

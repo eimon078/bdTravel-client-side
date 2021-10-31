@@ -5,6 +5,7 @@ import AddPlaces from './pages/AddPlaces/AddPlaces';
 import Booking from './pages/Booking/Booking/Booking';
 import Home from './pages/Home/Home/Home';
 import Login from './pages/Login/Login/Login';
+import PrivateRoute from './pages/Login/PrivateRoute/PrivateRoute';
 import Register from './pages/Login/Register/Register';
 import ManageBooking from './pages/ManageBooking/ManageBooking';
 import MyBooking from './pages/MyBooking/MyBooking/MyBooking';
@@ -31,18 +32,18 @@ function App() {
             <Route path='/register'>
               <Register></Register>
             </Route>
-            <Route path="/addplace">
+            <PrivateRoute path="/addpackage">
               <AddPlaces></AddPlaces>
-            </Route>
-            <Route path="/booking/:id">
+            </PrivateRoute>
+            <PrivateRoute path="/booking/:id">
               <Booking></Booking>
-            </Route>
-            <Route path="/mybooking">
+            </PrivateRoute>
+            <PrivateRoute path="/mybooking">
               <MyBooking></MyBooking>
-            </Route>
-            <Route path="/managebooking">
+            </PrivateRoute>
+            <PrivateRoute path="/managebooking">
               <ManageBooking></ManageBooking>
-            </Route>
+            </PrivateRoute>
             <Route path='*'>
               <NotFound></NotFound>
             </Route>

@@ -18,13 +18,13 @@ const Places = () => {
     }, [])
 
     if (loading) {
-        return <Spinner animation="border" variant="warning" />
+        return <Spinner animation="border" variant="warning" className='my-5' />
     }
     return (
-        <div>
-            <h1>This is places</h1>
+        <div className='mt-5'>
+            <h1 className="mt-5 mb-3">OUR PACKAGES</h1>
             <Container>
-                <h1 className="mt-5 mb-3 text-primary">Our Services</h1>
+
                 <Row xs={1} md={3} className="g-4">
                     {
                         places.map(place => <Place

@@ -14,8 +14,7 @@ const Footer = () => {
                         <h4>Quick Links</h4>
                         <ul className="footer-link text-white">
                             <li><Link className="text-decoration-none text-body me-5" to="/home"><span className="text-white">Home</span></Link></li>
-                            <li><Link className="text-decoration-none text-body me-5" to="/appointment"><span className="text-white">Appointment</span></Link></li>
-                            <li><Link className="text-decoration-none text-body me-5" to="/about"><span className="text-white">About</span></Link></li>
+                            <li><Link className="text-decoration-none text-body me-5" to="/login"><span className="text-white">Login</span></Link></li>
                         </ul>
                     </Col>
                     <Col>

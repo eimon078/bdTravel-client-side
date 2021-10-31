@@ -18,9 +18,9 @@ const Header = () => {
                             user.email ? <span className="header_link">
                                 <Nav.Link as={Link} to="/mybooking" className="text-white">My Booking</Nav.Link>
                                 <Nav.Link as={Link} to="/managebooking" className="text-white">Manage Booking</Nav.Link>
-                                <Nav.Link as={Link} to="/addplace" className="text-white">Add Place</Nav.Link>
+                                <Nav.Link as={Link} to="/addpackage" className="text-white">Add Package</Nav.Link>
                                 <Button size='sm' className="me-2 bg-black" onClick={googleSignOut}>Log Out</Button>
-                            </span> : <Nav.Link as={Link} to="/login">Login</Nav.Link>
+                            </span> : <Nav.Link as={Link} to="/login" className="text-white">Login</Nav.Link>
                         }
                         <Navbar.Text className='text-white'>
                             {userName && <span>{userName}</span>}

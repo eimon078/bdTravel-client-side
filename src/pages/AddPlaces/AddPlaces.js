@@ -28,8 +28,9 @@ const AddPlaces = () => {
     }
     return (
         <div>
-            <h1>Add Places</h1>
+
             <Container>
+                <h1 className="my-5">ADD NEW PACKAGE</h1>
                 <Row className="justify-content-center mb-3">
                     <Col lg="8">
                         <form onSubmit={handleSubmit(onSubmit)}>
@@ -65,7 +66,7 @@ const AddPlaces = () => {
 
                             <Row className="justify-content-center mb-3">
                                 <Col lg="8">
-                                    <input className="w-50 rounded-pill p-1" style={{ background: "Tomato", color: "white" }} type="submit" value="Add Place" />
+                                    <input className="w-50 rounded-pill p-1 bg-warning" type="submit" value="Add Package" />
                                 </Col>
                             </Row>
                         </form>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { useForm } from "react-hook-form";
+import { useHistory, useLocation } from 'react-router';
 import './Login.css'
 import login_img from '../../../Images/login_img.jpg'
 import { Link } from 'react-router-dom';
@@ -14,12 +15,19 @@ const Login = () => {
 
     const { signInWithGoogle, setUser, setIsLoading } = useAuth();
 
+
+    //handle redirect
+    const history = useHistory();
+    const location = useLocation();
+    const redirect = location.state?.form || '/';
+
+
     // firebase auth method 
     const googleSignIn = () => {
         signInWithGoogle()
             .then(res => {
                 setUser(res.user)
-                // history.push(redirect);
+                history.push(redirect);
             })
             .finally(() => {
                 setIsLoading(false)

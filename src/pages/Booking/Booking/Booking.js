@@ -67,8 +67,9 @@ const Booking = () => {
     }
     return (
         <div>
-            <h1>book</h1>
+
             <Container>
+                <h1 className="my-5">PLEASE BOOKING CONFIRM</h1>
                 <Row xs={1} md={2} className="g-4">
                     {place?.cost ? <Place place={place} button=''></Place> : <Spinner animation="border" variant="warning" />}
                     <Col>
